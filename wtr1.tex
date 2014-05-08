@@ -1,0 +1,222 @@
+\documentclass[pdftex,12pt,a4paper]{article}
+\usepackage{thumbpdf}
+\usepackage{titletoc}		% to dotfill the table of contents
+\usepackage{geometry}		% for margin formatting
+\usepackage{titlesec}		% for setting section heading font sizes
+\usepackage{times}			% to use times new roman font
+\usepackage{graphicx}		% to make figures
+\usepackage{amsmath}		% to make figure numbers correspond to section
+
+%\usepackage[pdftex,
+%	colorlinks=true,
+%	urlcolor=rltblue,
+%	filecolor=rltgreen,
+%	linkcolor=rltred]{hyperref, graphicx}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+% 8.5 x 11 in paper with 1 inch margin
+\geometry{legalpaper, margin=1in}
+
+% section heading sizes decreasing
+\titleformat*{\section}{\LARGE\bfseries}
+\titleformat*{\subsection}{\Large\bfseries}
+\titleformat*{\subsubsection}{\large\bfseries}
+% \titleformat*{\paragraph}{\large\bfseries}
+% \titleformat*{\subparagraph}{\large\bfseries}
+
+\begin{document}
+
+% ====== TITLE PAGE SECTION ====== 
+\begin{titlepage}
+\begin{center}
+
+\textsc{\large UNIVERSITY OF WATERLOO} \\ [0.5 cm]
+\textsc{\large Software Engineering} \\ [4.0 cm]
+
+\HRule \\ [0.4 cm]
+\textsc{\huge Some Sort of Report Title Here That May Be Really Long} \\ [0.4 cm]
+\HRule \\ [4.0 cm]
+
+\textsc{Company Name} \\
+\textsc{Company Location} \\
+
+\textsc \bf{Prepared by} \\ [0.3 cm]
+\textsc {Student ID: 12345678} \\
+\textsc {User ID: someID} \\
+\textsc {2A Software Engineering} \\
+{\large \today}
+
+\end{center}
+\end{titlepage}
+% ================================
+
+% ====== LETTER OF SUBMITTAL ======
+
+% page numbering for front matter in roman numeral
+% starts at page 2, but hide page number
+\pagenumbering{roman}
+\setcounter{page}{2}
+\thispagestyle{empty}
+
+Student Name \\
+Street Name \\
+Blah town, ON \\
+Postal Code \\
+
+Date Here \\
+\\
+Dr. William Wilson, Director \\
+Software Engineering \\
+University of Waterloo \\
+Waterloo, ON \\
+N2L 3G1 \\
+\\
+Report: 1 \\
+Previous academic term: 2A \\
+Employer: Thoughtworks \\
+Department: Application development \\
+
+
+Dear Dr. Wilson:\\ 
+
+I hereby confirm that I have received no help, other than what is mentioned above, in writing this report. I also confirm that this report has not been previously submitted for academic credit at this or any other academic institution. 
+
+Student Name \\
+Student Number \\
+
+SIGNATURE HERE
+
+% =================================
+
+% 1.5 spacing in Word is 1.3 in LaTex
+\linespread{1.3}
+
+% ====== EXECUTIVE SUMMARY ======
+\pagebreak
+\renewcommand{\abstractname}{Executive Summary}
+
+\begin{abstract}
+
+% space between paragraphs
+\setlength{\parskip}{1em}
+
+ % replace this with actual content of executive summary
+ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dictum magna nec ultricies porta. Ut sed ipsum ut mi ultricies aliquet nec a ipsum. Sed vitae ultrices libero, vitae elementum urna. Maecenas facilisis eget quam et fermentum. Ut feugiat turpis augue, in accumsan velit congue at. Quisque felis dui, consectetur vitae quam eget, rhoncus sagittis eros. Vestibulum aliquam elit ipsum, non ultricies nisi commodo et. Maecenas in nisl vitae augue facilisis placerat. In hac habitasse platea dictumst. Nullam facilisis facilisis arcu eu condimentum. Maecenas tincidunt odio et laoreet placerat. Suspendisse vestibulum sapien quis leo facilisis porttitor. Nam sed tortor metus. Morbi feugiat dui at pellentesque auctor.
+
+ Donec bibendum vel justo vel gravida. Morbi pulvinar ornare nulla quis consectetur. Donec vulputate diam eget ornare commodo. Aliquam ornare molestie odio eget vehicula. Sed dictum dui a dolor commodo, ut euismod sapien congue. Cras cursus sapien sit amet tellus mattis commodo. Nulla magna tellus, sollicitudin a nulla in, dictum cursus magna. Cras a lobortis nulla, eget vulputate quam. Nulla convallis dolor libero, non elementum tellus variusf ut. Nam pellentesque dolor id ullamcorper laoreet. Morbi viverra faucibus nisl. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+\end{abstract}
+
+% ===============================
+
+% ====== TABLE OF CONTENTS ======
+\newpage
+\dottedcontents{section}[1.5em]{\bfseries}{1.3em}{.6em}
+
+\tableofcontents
+% ===============================
+
+
+% ====== LIST OF FIGURES ======
+% NOTE: Can be removed if unnecessary
+\newpage
+\listoffigures
+% =============================
+
+% ====== LIST OF TABLES ======
+% NOTE: Can be removed if unnecessary
+\newpage
+\listoftables
+% ============================
+
+% page numbering for actual content
+\clearpage
+\pagenumbering{arabic}
+
+% ====== INTRODUCTION ======
+\pagebreak
+\section{Introduction}
+
+% space between paragraphs
+\setlength{\parskip}{1em}
+
+ Maecenas ut posuere turpis. Duis id lobortis urna. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus dignissim dictum posuere. In luctus dolor et enim vehicula lobortis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec fermentum ante bibendum venenatis blandit. Mauris eleifend vehicula enim eget placerat. Donec at dictum leo, semper condimentum turpis. Fusce sagittis quis turpis ut aliquet. Aenean rutrum, leo sed sodales eleifend, odio elit elementum erat, eget cursus ipsum nibh nec libero. Pellentesque malesuada nibh vitae felis fringilla, quis bibendum erat posuere.
+
+Proin ut dolor enim. Fusce tempus tellus eget sapien molestie laoreet. Proin elit urna, accumsan in varius quis, gravida et risus. Maecenas sed rhoncus erat. Duis egestas nibh sed blandit ultricies. Donec viverra condimentum enim, ut fermentum metus scelerisque quis. Nam volutpat dignissim augue sed sollicitudin. Duis porttitor enim vitae eros semper, ac feugiat lectus tempus. In vel faucibus dolor, in auctor elit. Aliquam erat volutpat. Nulla vel tortor eget lacus malesuada tristique sed sed sem. Cras vel iaculis augue. Proin id ipsum faucibus, rhoncus diam non, sollicitudin mauris. Morbi scelerisque neque mollis magna vestibulum, a tincidunt libero pharetra. Phasellus nec auctor ipsum. Fusce id nisi semper, dignissim orci ut, placerat metus.
+
+Ut consequat iaculis urna, eget bibendum leo sagittis sed. Nulla facilisi. Quisque vel erat vitae libero tincidunt pellentesque quis a lacus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam et enim ac velit eleifend pellentesque eu id lorem. Fusce eget magna id quam pellentesque luctus quis ac tellus. Mauris imperdiet et tortor ut pellentesque. Morbi et est quis metus rutrum scelerisque. Morbi placerat quam quis aliquam dignissim. Nulla facilisis, turpis at aliquam venenatis, justo purus porttitor neque, non mattis dui quam at nisi. Aenean malesuada sed arcu in varius. Aliquam facilisis turpis nec leo venenatis sagittis. Duis lobortis felis vitae massa lacinia, a laoreet neque semper. Etiam lobortis nisl ac massa rutrum suscipit. Sed eu euismod nisl. Nulla bibendum pretium nisi. 
+
+% ==========================
+
+% ====== BACKGROUND ======
+% REMINDER: If a section is divided into subsections, it has at least two subsections
+\pagebreak
+\section{Background}
+\subsection{Design Constraints}
+
+% can insert some sort of table
+% NOTE: If inserting a table, make sure it is referred to in the text before or on same page as table
+\begin{table}[ht]
+\numberwithin{table}{section}
+\caption{TABLE TITLE/CAPTION HERE}
+\centering
+\begin{tabular}{c c c c} % 4 centered columns, add or remove c's depending on how many columns you need 
+\hline %add horizontal line
+Some Heading 1 & Some Heading 2 & Some Heading 3 & Some Heading 4 \\ [0.5ex]
+\hline
+Maybe a Sideways Heading & 	A & B & C \\
+Another one here 		 &  D & E & F \\
+Meh... 					 &  G & H & I \\ [1ex]	% vertical space
+\hline
+\end{tabular}
+\label{table:nonlin}
+\end{table}
+
+\subsection{Evaluation Criteria}
+
+% can insert some sort of figure
+% NOTE: If inserting a figure, make sure it is referred to in the text before or on same page as figure
+\begin{figure}[ht!]
+\numberwithin{figure}{section}
+\centering
+\includegraphics[width=90mm]{square2.png}
+% add figure caption
+\caption{[INSERT FIGURE CAPTION HERE]}
+\label{overflow}
+\end{figure}
+
+% ========================
+
+% ====== CONCLUSIONS ======
+% NOTE: Cannot be broken into subsections
+\pagebreak
+\section {Conclusions}
+% =========================
+
+% ====== RECOMMENDATIONS ======
+% NOTE: Cannot be broken into subsections
+\pagebreak
+\section {Recommendations}
+% =============================
+
+% ====== GLOSSARY ======
+% NOTE: Cannot be broken into subsections
+% ======================
+
+% ====== REFERENCES ======
+% NOTE: Cannot be broken into subsections
+\pagebreak
+\section {References}
+% ========================
+
+% ====== ACKNOWLEDGEMENTS ======
+% NOTE: Cannot be broken into subsections
+\pagebreak
+\section {Acknowledgements}
+% ==============================
+
+% Appendices restart the section numbering, using capital letters as section labels and Arabic numerals as subsection labels (i.e., A.1, A.2, ); appendix headers are in decreasing-sized fonts.
+
+
+
+\end{document}
